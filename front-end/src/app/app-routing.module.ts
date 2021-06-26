@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {
@@ -8,12 +8,12 @@ const routes: Routes = [
       .then(m => m.D3_JS_DemoModule),
   },
   {
-    path: 'AdGrid',
+    path: 'AdGrid_demo',
     loadChildren: () => import('./pages/AgGrid/AgGrid_Demo.module')
       .then(m => m.AgGrid_DemoModule),
   },
   {
-    path: 'Highcharts',
+    path: 'Highcharts_demo',
     loadChildren: () => import('./pages/Highcharts/Highcharts_Demo.module')
       .then(m => m.Highcharts_DemoModule),
   },

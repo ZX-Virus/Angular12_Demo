@@ -1,2 +1,14 @@
-App
+<p>Hello i'm Sergey and this is my demo project //TODO: need to use i18n</p>
+
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+     *ngFor="let link of navLinks"
+     [routerLink]="link.path"
+     [active]="activeLink == link"
+     (click)="activeLink = link"
+  >
+    {{link.label}}
+  </a>
+</nav>
+
 <router-outlet></router-outlet>
