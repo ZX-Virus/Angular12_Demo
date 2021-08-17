@@ -1,14 +1,34 @@
-<div>
-  <canvas #audioVisualization></canvas>
-  <audio
-    [src]="mp3"
-    #audio
-    controls
-    loop
-  ></audio>
-</div>
-
 <div
   class="container"
   #rendererContainer
-></div>
+>
+  <div
+    class="audio"
+    [class.hidden]="loading"
+  >
+    <canvas
+      class="audio-effects"
+      #audioVisualization
+    ></canvas>
+    <audio
+      #audio
+      [src]="mp3"
+      controls
+      loop
+    ></audio>
+  </div>
+
+  <div
+    class="spinner-center"
+    [class.hidden]="!loading"
+  >
+    <app-spinner></app-spinner>
+  </div>
+
+  <div
+    class="thanks"
+    [class.hidden]="loading"
+  >
+    Thanks to KuhnIndustriess for the 3D-model "A Certain DeLorean"
+  </div>
+</div>
