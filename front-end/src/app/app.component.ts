@@ -13,11 +13,11 @@ interface ILink {
 })
 export class AppComponent {
   navLinks: ILink[] = [
-    {path: 'D3_Demo', label: 'D3.js'},
     {path: 'AdGrid_demo', label: 'AgGrid'},
     {path: 'Highcharts_demo', label: 'Highcharts'},
+    {path: 'ThreeJS_demo', label: 'ThreeJS'},
   ];
-  activeLink: ILink = this.navLinks[0];
+  activeLink: ILink = this.navLinks[2];
 
   constructor(
     private router: Router

@@ -3,11 +3,6 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'D3_Demo',
-    loadChildren: () => import('./pages/D3_JS_Demo/D3_JS_Demo.module')
-      .then(m => m.D3_JS_DemoModule),
-  },
-  {
     path: 'AdGrid_demo',
     loadChildren: () => import('./pages/AgGrid/AgGrid_Demo.module')
       .then(m => m.AgGrid_DemoModule),
@@ -16,6 +11,11 @@ const routes: Routes = [
     path: 'Highcharts_demo',
     loadChildren: () => import('./pages/Highcharts/Highcharts_Demo.module')
       .then(m => m.Highcharts_DemoModule),
+  },
+  {
+    path: 'ThreeJS_demo',
+    loadChildren: () => import('./pages/3D_Object/ThreeJS_Demo.module')
+      .then(m => m.ThreeJS_DemoModule),
   },
 ];
 
