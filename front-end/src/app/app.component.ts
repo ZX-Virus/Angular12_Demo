@@ -17,7 +17,7 @@ export class AppComponent {
     {path: 'Highcharts_demo', label: 'Highcharts'},
     {path: 'ThreeJS_demo', label: 'ThreeJS'},
   ];
-  activeLink: ILink = this.navLinks[2];
+  activeLink: ILink = this.navLinks[0];
 
   constructor(
     private router: Router
