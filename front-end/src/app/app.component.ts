@@ -21,11 +21,11 @@ export class AppComponent {
         path: routeParam.path as string,
         label: routeParam?.data?.label,
       }));
-    const subscription = router.events.pipe(
+    const subscription$ = router.events.pipe(
       tap(event => {
         if (event instanceof NavigationEnd) {
           this.activeLink = this.navLinks.find(navLink => ('/' + navLink.path) === event.urlAfterRedirects) as ITabLink;
-          subscription.unsubscribe();
+          subscription$.unsubscribe();
         }
       })
     ).subscribe();
