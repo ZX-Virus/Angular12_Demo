@@ -21,6 +21,7 @@
       "dom"
     ],
     "paths": {
+      "@shared/*": ["./app/modules/shared/*"],
       "@interfaces/*": ["./app/interfaces/*"]
     }
   },

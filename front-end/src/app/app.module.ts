@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {MatTabsModule} from "@angular/material/tabs";
-import {SharedCommonModule} from "./modules/shared/shared-common.module";
+import {SharedCommonModule} from '@shared/shared-common.module';
 
 @NgModule({
   declarations: [
