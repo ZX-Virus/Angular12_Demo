@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from "@angular/common";
 import {ThreeJS_DemoRoutingModule} from "./ThreeJS_Demo-routing.module";
 import {DeloreanComponent} from "./components/delorean/delorean.component";
-import {SharedCommonModule} from "../../modules/shared/shared-common.module";
+import {SharedCommonModule} from "@shared/shared-common.module";
 
 
 @NgModule({

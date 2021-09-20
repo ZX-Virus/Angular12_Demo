@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "gzipper": "gzipper",
+    "compress": "gzipper compress -verbose --level 9 ./dist/dist ./dist/gzipped",
+    "prod": "ng build && npm run compress"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +37,7 @@
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "@types/three": "0.130.1",
+    "gzipper": "^5.0.1",
     "jasmine-core": "~3.7.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

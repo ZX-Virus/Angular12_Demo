@@ -9,7 +9,7 @@ import {AgGridAngular} from "ag-grid-angular";
   styleUrls: ['./ag-grid-demo.component.scss']
 })
 export class AgGridDemoComponent implements OnInit {
-  @ViewChild('agGrid') agGrid!: AgGridAngular;
+  @ViewChild('agGrid', {static: false}) agGrid: AgGridAngular | undefined;
 
   columnDefs = [
     {field: 'make', sortable: true, filter: true, checkboxSelection: true},
@@ -17,7 +17,7 @@ export class AgGridDemoComponent implements OnInit {
     {field: 'price', sortable: true, filter: true}
   ];
 
-  public rowData!: Observable<any[]>
+  rowData: Observable<Object[]> | undefined;
 
   constructor(
     private http: HttpClient,
@@ -25,13 +25,15 @@ export class AgGridDemoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.rowData = this.http.get<any[]>('https://www.ag-grid.com/example-assets/row-data.json');
+    this.rowData = this.http.get<Object[]>('https://www.ag-grid.com/example-assets/row-data.json');
   }
 
   getSelectedRows(): void {
-    const selectedNodes = this.agGrid.api.getSelectedNodes();
-    const selectedData = selectedNodes.map(node => node.data);
-    const selectedDataStringPresentation = selectedData.map(node => `${node.make} ${node.model}`).join(', ');
-    alert(`Selected nodes: ${selectedDataStringPresentation}`);
+    if (this.agGrid) {
+      const selectedNodes = this.agGrid.api.getSelectedNodes();
+      const selectedData = selectedNodes.map(node => node.data);
+      const selectedDataStringPresentation = selectedData.map(node => `${node.make} ${node.model}`).join(', ');
+      alert(`Selected nodes: ${selectedDataStringPresentation}`);
+    }
   }
 }

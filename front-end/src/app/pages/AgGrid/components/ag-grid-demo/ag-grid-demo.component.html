@@ -1,6 +1,7 @@
 <button (click)="getSelectedRows()">Get Selected Rows</button>
 <ag-grid-angular
   #agGrid
+  *ngIf="rowData"
   class="ag-theme-alpine"
   [rowData]="(rowData|async)!"
   [columnDefs]="columnDefs"
