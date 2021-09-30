@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HighchartsDemoComponent } from './highcharts-demo.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 describe('HighchartsDemoComponent', () => {
   let component: HighchartsDemoComponent;
@@ -8,7 +9,8 @@ describe('HighchartsDemoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HighchartsDemoComponent ]
+      declarations: [ HighchartsDemoComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   });

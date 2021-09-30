@@ -2,10 +2,9 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {SpinnerComponent} from "./spinner/spinner.component";
 
-const SHARED_COMPONENTS: any[] = [
+export const SHARED_COMPONENTS: any[] = [
   SpinnerComponent
 ];
-
 
 @NgModule({
   imports: [

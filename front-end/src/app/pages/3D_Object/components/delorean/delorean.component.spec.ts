@@ -1,5 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {DeloreanComponent} from "./delorean.component";
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 
 describe('AgGridDemoComponent', () => {
@@ -8,9 +9,10 @@ describe('AgGridDemoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DeloreanComponent ]
+      declarations: [DeloreanComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

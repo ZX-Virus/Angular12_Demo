@@ -1,6 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import {DeloreanComponent} from "./components/delorean/delorean.component";
+import {SHARED_COMPONENTS} from "@shared/shared-common.module";
 
 describe('DeloreanComponent', () => {
   beforeEach(async () => {
@@ -9,7 +10,8 @@ describe('DeloreanComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        DeloreanComponent
+        DeloreanComponent,
+        ...SHARED_COMPONENTS
       ],
     }).compileComponents();
   });
